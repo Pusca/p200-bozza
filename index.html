@@ -2,7 +2,6 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agilework CNC P200 — bozza pagina 3D</title>
 <style>
@@ -25,17 +24,17 @@
   #s0{min-height:100vh;padding-top:56px}
   section.dx{justify-content:flex-end}
   section.centro{justify-content:center;align-items:flex-end;padding-bottom:9vh}
-  .scheda{pointer-events:auto;width:min(430px,90vw);background:rgba(255,255,255,.93);backdrop-filter:blur(6px);border:1px solid var(--linea);border-left:4px solid var(--petrolio);
+  .scheda{pointer-events:auto;width:min(470px,90vw);background:rgba(255,255,255,.93);backdrop-filter:blur(6px);border:1px solid var(--linea);border-left:4px solid var(--petrolio);
           padding:26px 28px 24px;opacity:0;transform:translateY(36px);transition:opacity .6s ease, transform .6s ease;box-shadow:0 18px 40px -24px rgba(14,18,17,.45)}
   section.vis .scheda{opacity:1;transform:none}
-  .occhiello{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--petrolio);font-weight:600;margin:0 0 8px}
+  .occhiello{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--petrolio);font-weight:600;margin:0 0 8px}
   h1,h2{margin:0 0 12px;color:var(--inchiostro);font-weight:600;line-height:1.15;text-wrap:balance}
   h1{font-size:clamp(26px,min(3.2vw,5.6vh),42px)} h2{font-size:clamp(22px,2.2vw,30px)}
-  p{margin:0 0 10px;font-size:15.5px} p:last-child{margin-bottom:0}
-  ul{margin:8px 0 0;padding-left:18px;font-size:15px} li{margin-bottom:5px}
-  .numeri{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  p{margin:0 0 10px;font-size:17px} p:last-child{margin-bottom:0}
+  ul{margin:8px 0 0;padding-left:18px;font-size:16.5px} li{margin-bottom:6px}
+  .numeri{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
   .numeri div{border-top:2px solid var(--petrolio);padding-top:6px}
-  .numeri b{display:block;font-size:24px;color:var(--inchiostro);line-height:1.1} .numeri span{font-size:12px;color:#5a6564}
+  .numeri b{display:block;font-size:24px;color:var(--inchiostro);line-height:1.1} .numeri span{font-size:14px;color:#4d5857}
   section.finale{display:block;min-height:0;padding:0;pointer-events:auto;background:var(--carta);position:relative;margin-top:30vh;border-top:1px solid var(--linea)}
   section.finale::before{content:"";position:absolute;left:0;right:0;top:-26vh;height:26vh;background:linear-gradient(to bottom,rgba(238,241,240,0),var(--carta));pointer-events:none}
   .dentro{max-width:1120px;margin:0 auto;padding:9vh 5vw 11vh}
@@ -57,9 +56,9 @@
     #s0{min-height:100vh;min-height:100svh;padding-top:0}
     section.finale{min-height:0;padding:0;margin-top:20vh} .dentro{padding:34px 14px 48px} .dentro h2{font-size:21px;margin-bottom:16px} .pannello th,.pannello td{padding:7px 9px}
     .scheda{width:100%;max-width:520px;padding:16px 18px 16px;border-left-width:3px;background:rgba(255,255,255,.95)}
-    h1{font-size:23px} h2{font-size:19px;margin-bottom:8px} p{font-size:14px;margin-bottom:8px} ul{font-size:13.5px;margin-top:4px} li{margin-bottom:3px}
-    .occhiello{font-size:10.5px;margin-bottom:5px}
-    .numeri{margin-top:10px} .numeri b{font-size:19px} .numeri span{font-size:11px}
+    h1{font-size:23px} h2{font-size:19px;margin-bottom:8px} p{font-size:15px;margin-bottom:8px} ul{font-size:14.5px;margin-top:4px} li{margin-bottom:3px}
+    .occhiello{font-size:12.5px;margin-bottom:5px}
+    .numeri{margin-top:10px;gap:6px} .numeri b{font-size:17px} .numeri span{font-size:12px}
     .due{grid-template-columns:1fr;gap:18px} nav.punti{display:none}
     table{font-size:13px} th,td{padding:6px 6px} th{white-space:normal}
     .scorri{bottom:auto;top:46px}
@@ -72,7 +71,7 @@
 <canvas id="scena" aria-label="Modello 3D della stazione Agilework"></canvas>
 <header class="barra">
   <div class="marchio">agile<b>work</b> CNC P200</div>
-  <div class="bozza" title="Il modello 3D è quello della P250 con gli upgrade: le differenze della CNC non sono ancora modellate">BOZZA · modello 3D provvisorio</div>
+  <div class="bozza" title="Modello 3D ricavato dal CAD Agile Tools (assiemi 22_5003_950)">BOZZA</div>
 </header>
 <nav class="punti" aria-label="Sezioni"></nav>
 <div class="scorri" id="scorri">Scorri ↓</div>
@@ -85,8 +84,9 @@
       <h1>Agilework CNC a controllo numerico, con funzione autoapprendimento</h1>
       <p>Il posizionatore-manipolatore che inclina, ruota e solleva il pezzo. Ora impara la sequenza di lavoro e la ripete.</p>
       <div class="numeri">
-        <div><b>200 kg</b><span>portata</span></div>
+        <div><b>250 kg</b><span>portata</span></div>
         <div><b>0–90°</b><span>inclinazione</span></div>
+        <div><b>360°</b><span>rotazione</span></div>
         <div><b>250 mm</b><span>corsa tavola</span></div>
       </div>
     </div>
@@ -102,7 +102,8 @@
         <li>Software PLC/HMI con gestione di <b>200 ricette</b></li>
         <li><b>Autoapprendimento</b> fino a 60 step, con il tempo di ogni step registrato</li>
         <li>Riceve e trasmette dati; memorizza i lavori come progetti o commesse</li>
-        <li>Teleassistenza e controllo da remoto, italiano e inglese, Industria 4.0</li>
+        <li>Teleassistenza e controllo da remoto, italiano e inglese</li>
+        <li><b>Industria 4.0</b></li>
       </ul>
     </div>
   </section>
@@ -111,7 +112,7 @@
   <section id="s2">
     <div class="scheda">
       <p class="occhiello">Trasforma il lavoro manuale in agile</p>
-      <h2>Il pezzo si muove, la schiena no</h2>
+      <h2>Ergonomia: avere sempre una corretta posizione di lavoro</h2>
       <p>Usare il posizionatore Agilework CNC riduce, fino a eliminarlo, il rischio da sovraccarico biomeccanico del rachide nelle attività di movimentazione manuale.</p>
       <ul>
         <li><b>Solleva</b>: 250 mm di corsa, fermo in qualsiasi posizione</li>
@@ -125,81 +126,25 @@
   <section id="s3" class="dx">
     <div class="scheda">
       <p class="occhiello">agilework CNC · comandi</p>
-      <h2>Tre modalità: manuale, semiautomatico, automatico</h2>
+      <h2>Tre modalità: manuale, semiautomatico da autoapprendimento, automatico</h2>
       <ul>
         <li>Tre livelli di abilitazione all'utilizzo</li>
-        <li>Pulsanti per inclinazione, elevazione e senso di rotazione</li>
+        <li>Pulsanti per inclinazione, elevazione e senso di rotazione, rotazione da pedale</li>
         <li>Arresto di emergenza a norma EN 13850</li>
         <li>Account per accesso remoto e teleassistenza (Industry 4.0)</li>
       </ul>
     </div>
   </section>
 
-  <!-- 4 · pedale (Pagina 3) -->
+  <!-- 4 · telaio attrezzato (Pagina 4) -->
   <section id="s4">
-    <div class="scheda">
-      <p class="occhiello">Comando a pedale</p>
-      <h2>La rotazione si comanda con il piede</h2>
-      <p>Le mani restano sul pezzo: il pedale controlla la rotazione della tavola, 3 giri completi al minuto, con fermo in qualsiasi posizione.</p>
-    </div>
-  </section>
-
-  <!-- 5 · telaio attrezzato (Pagina 4) -->
-  <section id="s5" class="dx">
     <div class="scheda">
       <p class="occhiello">Nuovo telaio attrezzato</p>
       <h2>Gli utensili arrivano dall'alto, sopra il pezzo</h2>
-      <p>Elettroutensili, aspirazione e soffiaggio aria, avvitatori e distributori di collante appesi al telaio, con le cassette della minuteria a portata di mano.</p>
+      <p>Elettroutensili, aspirazione e soffiaggio aria, avvitatori e distributori di collante e quant'altro appesi al telaio, con le cassette della minuteria a portata di mano.</p>
     </div>
   </section>
 
-  <!-- 6 · braccio con dosatore (Pagina 4) -->
-  <section id="s6">
-    <div class="scheda">
-      <p class="occhiello">Braccio porta-accessori</p>
-      <h2>Collante e accessori accanto alla tavola</h2>
-      <p>Il braccio laterale sale con la colonna e resta in piano quando la tavola si inclina: il distributore è sempre alla stessa distanza dal pezzo.</p>
-    </div>
-  </section>
-
-  <!-- 7 · scheda tecnica e due prodotti -->
-  <section id="s7" class="finale">
-    <div class="dentro">
-      <p class="occhiello">Scheda tecnica · due prodotti</p>
-      <h2>Agilework CNC P200 e Agilework P250</h2>
-      <div class="due">
-        <table class="pannello">
-          <thead><tr><th colspan="2">Agilework CNC P200</th></tr></thead>
-          <tbody>
-            <tr><th>Portata</th><td>200 kg</td></tr>
-            <tr><th>Corsa tavola</th><td>250 mm, da 1.000 a 1.250 mm dalla pedana, 1 m/min, servo-martinetto con encoder</td></tr>
-            <tr><th>Rotazione</th><td>Continua nei due sensi, 3 giri/min, comandata da pedale</td></tr>
-            <tr><th>Inclinazione</th><td>Da orizzontale a 90°, fermo in qualsiasi posizione, encoder</td></tr>
-            <tr><th>Tavola</th><td>Ø 500 mm in alluminio, 4 feritoie M16 + 4 feritoie M12</td></tr>
-            <tr><th>Alimentazione</th><td>220 V – 50 Hz – 16 A, cavo 3 m; assorbimento max 1,5 kVA</td></tr>
-            <tr><th>Prese ausiliarie</th><td>3 Schuko + 1 bipasso, 10 A complessivi</td></tr>
-            <tr><th>Protezione</th><td>IPx4 (EN 60529), accessori esclusi</td></tr>
-            <tr><th>Ingombro / peso</th><td>760 × 925 mm, altezza 1.000 mm, 360 kg</td></tr>
-            <tr><th>Garanzia</th><td>12 mesi dalla consegna</td></tr>
-          </tbody>
-        </table>
-        <table class="pannello">
-          <thead><tr><th></th><th>P250</th><th>CNC P200</th></tr></thead>
-          <tbody>
-            <tr><th>Comando</th><td>Selettori e touchscreen, posizioni salvate</td><td>Controllo numerico, ricette e autoapprendimento</td></tr>
-            <tr><th>Portata</th><td>250 kg</td><td>200 kg</td></tr>
-            <tr><th>Quota tavola</th><td>890–1.140 mm</td><td>1.000–1.250 mm dalla pedana</td></tr>
-            <tr><th>Corsa</th><td>250 mm</td><td>250 mm</td></tr>
-            <tr><th>Inclinazione</th><td>0–90°</td><td>0–90°</td></tr>
-            <tr><th>Rotazione</th><td>Oraria e antioraria</td><td>Continua, a pedale</td></tr>
-            <tr><th>Modalità</th><td>Manuale</td><td>Manuale, semiautomatico, automatico</td></tr>
-            <tr><th>Telaio attrezzato</th><td>Da definire</td><td>Nuovo telaio con utensili</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="nota">Bozza di struttura. Testi e dati della CNC P200 sono quelli delle pagine 1–4 e della scheda tecnica ricevute; i dati della P250 sono quelli pubblicati. Il modello 3D mostrato è la P250 con gli upgrade, in attesa di modellare le differenze della CNC.</p>
-    </div>
-  </section>
 </main>
 
 <script type="importmap">
@@ -209,8 +154,9 @@
 <script type="module">
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
-const MODELLO = 'P250_completo_upgrade.glb';
+const MODELLO = 'CNC_P200.glb';   // dal CAD Agile Tools 22_5003_950, compresso Draco
 const canvas = document.getElementById('scena');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -242,23 +188,20 @@ const pavimento = new THREE.Mesh(new THREE.CircleGeometry(14, 64), new THREE.Mes
 pavimento.rotation.x = -Math.PI / 2; pavimento.position.y = -0.002; pavimento.receiveShadow = true;
 scene.add(pavimento);
 
-// --- keyframes: "at" is in sections (0 = first section centred). Coordinates are three.js (Y up, front of the machine = +Z)
-// lift in metres, tilt/rot in degrees, u1/u2 = upgrades shown (0..1)
+// --- keyframes: "at" is in sections (0 = first section centred). Coordinates are three.js (Y up, front of the machine = +Z,
+// console on the left = -X, frame behind = -Z). lift in metres, tilt/rot in degrees, tel = equipped frame shown (0..1)
 const K = [
-  { at: 0.0, cam: [-2.0, 1.45, 2.7],  tgt: [-0.75, 0.74, 0.0],  lift: 0,    tilt: 0,  rot: 0,   u1: 0, u2: 0, mc: [-1.25, 1.35, 2.75], mt: [-0.12, 0.72, 0.0] },
-  { at: 1.0, cam: [-0.05, 1.42, 0.95], tgt: [-0.62, 0.84, -0.06], lift: 0,    tilt: 0,  rot: 0,   u1: 0, u2: 0, mc: [-0.16, 1.36, 0.86], mt: [-0.60, 0.86, -0.05] },
-  { at: 1.55, cam: [1.25, 1.55, 2.05], tgt: [0.0, 0.86, 0.02],   lift: 0,    tilt: 0,  rot: 0,   u1: 0, u2: 0, mc: [0.95, 1.5, 2.3], mt: [0.03, 0.80, 0.02] },
-  { at: 1.85, cam: [1.45, 1.6, 2.1],  tgt: [0.0, 0.95, 0.05],   lift: 0.25, tilt: 0,  rot: 0,   u1: 0, u2: 0, mc: [1.0, 1.6, 2.4], mt: [0.03, 0.95, 0.03] },
-  { at: 2.15, cam: [1.7, 1.45, 2.0],  tgt: [0.0, 0.98, 0.1],    lift: 0.25, tilt: 75, rot: 0,   u1: 0, u2: 0, mc: [1.15, 1.5, 2.4], mt: [0.03, 0.98, 0.05] },
-  { at: 2.5, cam: [1.2, 1.5, 2.3],   tgt: [0.0, 0.98, 0.1],    lift: 0.25, tilt: 75, rot: 300, u1: 0, u2: 0, mc: [0.8, 1.55, 2.5], mt: [0.03, 0.98, 0.05] },
-  { at: 3.0, cam: [-0.25, 1.3, 0.75], tgt: [-0.56, 0.84, -0.04], lift: 0.1,  tilt: 20, rot: 360, u1: 0, u2: 0, mc: [-0.3, 1.3, 0.8], mt: [-0.58, 0.86, -0.04] },
-  { at: 4.0, cam: [-0.75, 0.62, 1.25], tgt: [-0.3, 0.1, 0.1],    lift: 0,    tilt: 0,  rot: 720, u1: 0, u2: 0, mc: [-0.7, 0.7, 1.2], mt: [-0.31, 0.08, 0.1] },
-  { at: 5.0, cam: [-2.9, 1.75, 4.6],  tgt: [0.05, 1.12, -0.35], lift: 0,    tilt: 0,  rot: 720, u1: 0, u2: 1, mc: [-1.6, 1.5, 5.6], mt: [0.05, 1.2, -0.4] },
-  { at: 6.0, cam: [1.75, 1.45, 1.55], tgt: [0.42, 0.98, -0.02], lift: 0.12, tilt: 55, rot: 720, u1: 1, u2: 1, mc: [1.5, 1.45, 1.7], mt: [0.4, 1.0, 0.0] },
-  { at: 7.0, cam: [3.3, 2.3, 5.2],   tgt: [-0.1, 1.5, -0.2],   lift: 0,    tilt: 0,  rot: 765, u1: 1, u2: 1, mc: [1.8, 1.7, 5.8], mt: [0.0, 1.25, -0.3] },
+  { at: 0.0, cam: [-1.85, 1.45, 3.05], tgt: [-0.8, 0.78, 0.0],  lift: 0,    tilt: 0,  rot: 0,   tel: 0, mc: [-1.1, 1.4, 3.0],  mt: [-0.2, 0.8, 0.0] },
+  { at: 1.0, cam: [-0.75, 1.5, 1.25], tgt: [-0.08, 1.0, 0.1],   lift: 0,    tilt: 0,  rot: 0,   tel: 0, mc: [-0.8, 1.45, 1.25], mt: [-0.5, 1.0, 0.18] },
+  { at: 1.55, cam: [-1.5, 1.6, 2.3],  tgt: [-0.55, 1.0, 0.05],  lift: 0,    tilt: 0,  rot: 0,   tel: 0, mc: [-0.9, 1.6, 2.6], mt: [0.0, 0.95, 0.05] },
+  { at: 1.85, cam: [-1.6, 1.65, 2.3], tgt: [-0.55, 1.12, 0.05], lift: 0.25, tilt: 0,  rot: 0,   tel: 0, mc: [-0.95, 1.7, 2.6], mt: [0.0, 1.1, 0.05] },
+  { at: 2.15, cam: [-1.85, 1.55, 2.1], tgt: [-0.55, 1.15, 0.1], lift: 0.25, tilt: 75, rot: 0,   tel: 0, mc: [-1.1, 1.6, 2.5], mt: [0.0, 1.15, 0.1] },
+  { at: 2.5, cam: [-1.45, 1.6, 2.4],  tgt: [-0.55, 1.15, 0.1],  lift: 0.25, tilt: 75, rot: 300, tel: 0, mc: [-0.85, 1.65, 2.6], mt: [0.0, 1.15, 0.1] },
+  { at: 3.0, cam: [0.12, 1.35, 1.55], tgt: [0.2, 0.95, 0.0],  lift: 0.1,  tilt: 20, rot: 360, tel: 0, mc: [-0.6, 1.4, 1.4], mt: [-0.45, 0.95, 0.1] },
+  { at: 4.0, cam: [-1.9, 2.0, 4.4],   tgt: [-0.55, 1.3, -0.3],  lift: 0,    tilt: 0,  rot: 405, tel: 1, mc: [-1.4, 1.8, 5.0], mt: [0.0, 1.3, -0.3] },
 ];
 let stretto = innerWidth < 820;
-const stato = { cam: new THREE.Vector3(...(stretto ? K[0].mc : K[0].cam)), tgt: new THREE.Vector3(...(stretto ? K[0].mt : K[0].tgt)), lift: 0, tilt: 0, rot: 0, u1: 0, u2: 0 };
+const stato = { cam: new THREE.Vector3(...(stretto ? K[0].mc : K[0].cam)), tgt: new THREE.Vector3(...(stretto ? K[0].mt : K[0].tgt)), lift: 0, tilt: 0, rot: 0, tel: 0 };
 const ease = t => t * t * (3 - 2 * t);
 function campiona(s) {
   s = Math.min(Math.max(s, K[0].at), K[K.length - 1].at);
@@ -269,25 +212,25 @@ function campiona(s) {
   const L = (x, y) => x + (y - x) * t;
   const ca = stretto ? a.mc : a.cam, cb = stretto ? b.mc : b.cam, ta = stretto ? a.mt : a.tgt, tb = stretto ? b.mt : b.tgt;   // phones have their own framing
   return { cam: ca.map((v, k) => L(v, cb[k])), tgt: ta.map((v, k) => L(v, tb[k])),
-           lift: L(a.lift, b.lift), tilt: L(a.tilt, b.tilt), rot: L(a.rot, b.rot), u1: L(a.u1, b.u1), u2: L(a.u2, b.u2) };
+           lift: L(a.lift, b.lift), tilt: L(a.tilt, b.tilt), rot: L(a.rot, b.rot), tel: L(a.tel, b.tel) };
 }
 
 // --- model
-let assi = null, up1 = [], up2 = null;
-new GLTFLoader().load(MODELLO, (gltf) => {
+let assi = null, telaio = null;
+const draco = new DRACOLoader().setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/');
+new GLTFLoader().setDRACOLoader(draco).load(MODELLO, (gltf) => {
   const m = gltf.scene;
   m.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-  scene.add(m);
-  m.updateMatrixWorld(true);
+  const giro = new THREE.Group();          // in the CAD the front of the machine is +X: turn it to face +Z
+  giro.rotation.y = -Math.PI / 2;
+  giro.add(m); scene.add(giro);
+  giro.updateMatrixWorld(true);
   const n = name => m.getObjectByName(name);
-  assi = { lift: n('P250_Sollevamento'), tilt: n('P250_Inclinazione'), rot: n('P250_Rotazione') };
-  up1 = ['Upg1_Vassoio', 'Upg1_Dosatore'].map(n).filter(Boolean);
-  up2 = n('Upgrade_2_Radice');
-  const tappeto = n('Upg2_Tappeto_Grande');           // the mat stays even when the gantry is hidden
-  if (tappeto) scene.attach(tappeto);
-  window.__p250 = { assi, up1, up2 };
+  assi = { lift: n('CNC_Sollevamento'), tilt: n('CNC_Inclinazione'), rot: n('CNC_Rotazione') };
+  telaio = n('CNC_Telaio');
+  window.__cnc = { assi, telaio };
   const c = document.getElementById('carica'); c.style.opacity = 0; setTimeout(() => c.remove(), 700);
-}, undefined, (e) => { document.getElementById('carica').textContent = 'Modello 3D non caricato: ricarica la pagina'; console.error(e); });
+}, undefined, (e) => { document.getElementById('carica').textContent = 'Modello non caricato: avvia la pagina da un server locale (vedi README)'; console.error(e); });
 
 // --- scroll
 const sezioni = [...document.querySelectorAll('main section')];
@@ -330,17 +273,16 @@ function ciclo() {
   const k = lento ? 1 : 0.085;
   tgtV.set(...d.cam); stato.cam.lerp(tgtV, k);
   tgtV.set(...d.tgt); stato.tgt.lerp(tgtV, k);
-  for (const p of ['lift', 'tilt', 'rot', 'u1', 'u2']) stato[p] += (d[p] - stato[p]) * k;
+  for (const p of ['lift', 'tilt', 'rot', 'tel']) stato[p] += (d[p] - stato[p]) * k;
   // on narrow screens the card sits at the bottom: pull the camera back a little
   const largo = stretto ? Math.min(Math.max(0.52 / camera.aspect, 0.95), 1.25) : 1;   // narrower phone = a little further back
   camera.position.copy(stato.tgt).addScaledVector(stato.cam.clone().sub(stato.tgt), largo);
   camera.lookAt(stato.tgt);
   if (assi) {
-    if (assi.lift) assi.lift.position.y = stato.lift;                              // Blender Z -> glTF Y
-    if (assi.tilt) assi.tilt.rotation.x = THREE.MathUtils.degToRad(stato.tilt);    // tilt axis = X
-    if (assi.rot) assi.rot.rotation.y = THREE.MathUtils.degToRad(stato.rot);       // table axis = local Y
-    for (const o of up1) { o.visible = stato.u1 > 0.02; o.scale.setScalar(Math.max(stato.u1, 0.001)); }
-    if (up2) { up2.visible = stato.u2 > 0.02; up2.position.y = (1 - stato.u2) * 1.2; }
+    if (assi.lift) assi.lift.position.y = stato.lift;                               // Blender Z -> glTF Y
+    if (assi.tilt) assi.tilt.rotation.z = -THREE.MathUtils.degToRad(stato.tilt);    // CAD tilt axis (Blender Y) = glTF -Z; the table tips towards the operator
+    if (assi.rot) assi.rot.rotation.y = THREE.MathUtils.degToRad(stato.rot);        // table axis = local Y
+    if (telaio) { telaio.visible = stato.tel > 0.02; telaio.position.y = (1 - stato.tel) * 1.4; }
   }
   const i = Math.round(Math.min(Math.max(s, 0), sezioni.length - 1));
   [...nav.children].forEach((a, j) => a.classList.toggle('attivo', j === i));
